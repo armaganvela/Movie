@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Movie</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/appIcon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/myStyle.css" rel="stylesheet" />
+    <link href="~/Content/sidebar.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top sidebarNavigation" data-sidebarClass="navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle left-navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Movie App", "GetMovies", "Movie", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse pull-right">
+                <ul class="nav navbar-nav">
+                    @if ((ViewContext.RouteData.Values["Controller"].ToString() == "Movie") && (ViewContext.RouteData.Values["Action"].ToString() != "GetFavoriteVideos"))
+                    {
+                        <li style="display: flex; flex-direction: row">
+                            <img src="~/fonts/tab-movies-selected.svg" />
+                            @Html.ActionLink("Movies", "GetMovies", "Movie")
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="display: flex; flex-direction: row">
+                            <img src="~/fonts/tab-movies.svg" />
+                            @Html.ActionLink("Movies", "GetMovies", "Movie")
+                        </li>
+                    }
+
+                    @if ((ViewContext.RouteData.Values["Controller"].ToString() == "TV"))
+                    {
+                        <li style="display: flex; flex-direction: row">
+                            <img src="~/fonts/tab-tv-selected.svg" />
+                            @Html.ActionLink("TVs", "GetTVs", "TV")
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="display: flex; flex-direction: row">
+                            <img src="~/fonts/tab-tv.svg" />
+                            @Html.ActionLink("TVs", "GetTVs", "TV")
+                        </li>
+                    }
+                    <li>@Html.ActionLink("Favorite Movies", "GetFavoriteVideos", "Movie")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/sideBar.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

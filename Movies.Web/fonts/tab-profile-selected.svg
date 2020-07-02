@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>tab-profile-selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.016516%" y1="0%" x2="75.3624174%" y2="86.9751149%" id="linearGradient-1">
+            <stop stop-color="#F99F00" offset="0%"></stop>
+            <stop stop-color="#DB3069" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PROFILE-hov" transform="translate(-51.000000, -9.000000)" fill="url(#linearGradient-1)">
+            <g id="tab-profile-selected">
+                <path d="M71.6197183,22.2026574 C73.6547894,23.5295539 75,25.8259914 75,28.4366197 L75,33 L51,33 L51,28.4366197 C51,25.8259914 52.3452106,23.5295539 54.3802817,22.2026574 L54.3802817,9.96498946 C54.3802817,9.03900715 55.5841937,8.65755712 56.1307477,9.41036858 L60.369111,15.248138 C60.5888269,15.5506951 60.9429186,15.7302218 61.3201734,15.7302218 L64.695422,15.7302218 C65.0650069,15.7302218 65.4128605,15.5579085 65.6336501,15.2655408 L69.7748619,9.45092476 C70.3836441,8.63561441 71.6197183,9.00596698 71.6197183,9.92291999 L71.6197183,22.2026574 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

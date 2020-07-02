@@ -1,0 +1,41 @@
+﻿@model Movies.Web.Models.TVViewModel
+
+@{
+    ViewData["Title"] = "TV Detail";
+}
+
+
+@{
+    var genres = Model.Genres.Select(x => x.Name).ToList();
+
+    string genre = string.Join(", ", genres.ToArray());
+}
+
+<div class="detailContainer">
+    <div class="detailCart">
+        <img src="https://image.tmdb.org/t/p/w300/@Model.PosterPath" />
+        <div style="display: flex; flex-direction: column">
+            <div>@genre</div>
+            <div>
+                @Model.VoteAverage
+                <img src="~/fonts/selectedStar.svg" />
+                <img src="~/fonts/selectedStar.svg" />
+                <img src="~/fonts/selectedStar.svg" />
+                <img src="~/fonts/selectedStar.svg" />
+                <img src="~/fonts/star.svg" />
+            </div>
+        </div>
+    </div>
+    <div class="detailOverview">@Model.Overview</div>
+    <div class="movieContainer">
+        @foreach (var credit in Model.Credits)
+        {
+            <div class="movieCart">
+                <div style="margin: 10px">
+                    <img src="https://image.tmdb.org/t/p/w200/@credit.ProfilePath" />
+                    <div>@credit.Name</div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

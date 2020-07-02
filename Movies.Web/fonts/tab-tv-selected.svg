@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>tab-tv-selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.016516%" y1="0%" x2="75.3624174%" y2="86.9751149%" id="linearGradient-1">
+            <stop stop-color="#F99F00" offset="0%"></stop>
+            <stop stop-color="#DB3069" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TV-SHOW-hov" transform="translate(-51.000000, -10.000000)" fill="url(#linearGradient-1)">
+            <g id="tab-tv-selected">
+                <path d="M53,10 L73,10 C74.1045695,10 75,10.8954305 75,12 L75,26 C75,27.1045695 74.1045695,28 73,28 L53,28 C51.8954305,28 51,27.1045695 51,26 L51,12 C51,10.8954305 51.8954305,10 53,10 Z M56,13 L54,13 L54,17 L56,17 L56,13 Z M59,13 L57,13 L57,15 L59,15 L59,13 Z M55,30 L71,30 L71,32 L55,32 L55,30 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+﻿@model List<Movies.Web.Models.MovieViewModel>
+
+@{
+    ViewData["Title"] = "Favorite Videos";
+}
+
+<h1>Favorite Videos</h1>
+
+<div class="movieContainer">
+    @foreach (var movie in Model)
+    {
+        <div class="movieCart">
+            <a href="@Url.Action("MovieDetail", "Movie", new { id = movie.Id})">
+                <div style="margin: 10px">
+                    <img src="https://image.tmdb.org/t/p/w400/@movie.PosterPath" />
+                    <div>@movie.Title</div>
+                </div>
+            </a>
+        </div>
+    }
+</div>

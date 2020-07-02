@@ -1,0 +1,88 @@
+﻿@model Movies.Web.Models.MovieIndexViewModel
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<h1>Top Rated Movies</h1>
+
+<div class="movieContainer">
+    @foreach (var movie in Model.TopRatedMovies)
+    {
+        <div class="movieCart">
+            <a href="@Url.Action("MovieDetail", "Movie", new { id = movie.Id})">
+                <div style="margin: 10px">
+                    <img src="https://image.tmdb.org/t/p/w300/@movie.PosterPath" />
+                    <div>@movie.Title</div>
+                </div>
+            </a>
+            <input type="button" value="Add Favorite" class="btn btn-default" onclick="location.href='@Url.Action("AddFavoriteMovie", "Movie", new { id = movie.Id})'" />
+        </div>
+    }
+</div>
+
+<h3>Popular Movies</h3>
+
+<div class="movieContainer">
+    @foreach (var movie in Model.PopularMovies)
+    {
+        <div class="movieCart">
+            <a href="@Url.Action("MovieDetail", "Movie", new { id = movie.Id})">
+                <div style="margin: 10px">
+                    <img src="https://image.tmdb.org/t/p/w300/@movie.PosterPath" />
+                    <div>@movie.Title</div>
+                </div>
+            </a>
+            <input type="button" value="Add Favorite" class="btn btn-default" onclick="location.href='@Url.Action("AddFavoriteMovie", "Movie", new { id = movie.Id})'" />
+        </div>
+    }
+</div>
+
+<h3>Now Playing Movies</h3>
+
+<div class="movieContainer">
+    @foreach (var movie in Model.NowPlayingMovies)
+    {
+        <div class="movieCart">
+            <a href="@Url.Action("MovieDetail", "Movie", new { id = movie.Id})">
+                <div style="margin: 10px">
+                    <img src="https://image.tmdb.org/t/p/w300/@movie.PosterPath" />
+                    <div>@movie.Title</div>
+                </div>
+            </a>
+            <input type="button" value="Add Favorite" class="btn btn-default" onclick="location.href='@Url.Action("AddFavoriteMovie", "Movie", new { id = movie.Id})'" />
+        </div>
+    }
+</div>
+
+@if (Model.Pager.EndPage > 1)
+{
+    <ul class="pagination">
+        @if (Model.Pager.CurrentPage > 1)
+        {
+            <li>
+                <a href="~/Movie/GetMovies">First</a>
+            </li>
+            <li>
+                <a href="~/Movie/GetMovies?pageNumber=@(Model.Pager.CurrentPage - 1)">Previous</a>
+            </li>
+        }
+
+        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+        {
+            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                <a href="~/Movie/GetMovies?pageNumber=@page">@page</a>
+            </li>
+        }
+
+        @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+        {
+            <li>
+                <a href="~/Movie/GetMovies?pageNumber=@(Model.Pager.CurrentPage + 1)">Next</a>
+            </li>
+            <li>
+                <a href="~/Movie/GetMovies?pageNumber=@(Model.Pager.TotalPages)">Last</a>
+            </li>
+        }
+    </ul>
+}

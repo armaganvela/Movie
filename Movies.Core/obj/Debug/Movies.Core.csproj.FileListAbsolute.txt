@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Movies.Core.dll.config
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Movies.Core.dll
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Movies.Core.pdb
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user\source\repos\Movies\Movies.Core\obj\Debug\Movies.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Movies\Movies.Core\obj\Debug\Movies.Core.csproj.CopyComplete
+C:\Users\user\source\repos\Movies\Movies.Core\obj\Debug\Movies.Core.dll
+C:\Users\user\source\repos\Movies\Movies.Core\obj\Debug\Movies.Core.pdb
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\Movies\Movies.Core\bin\Debug\Newtonsoft.Json.xml

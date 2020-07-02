@@ -1,0 +1,66 @@
+﻿@model Movies.Web.Models.TVIndexViewModel
+
+@{
+    ViewData["Title"] = "TVs";
+}
+
+<h1>Popular TVs</h1>
+
+<div class="popularTVContainer">
+    @foreach (var tv in Model.PopularTVs)
+    {
+        <a href="@Url.Action("TVDetail", "TV", new { id = tv.Id})">
+            <div style="margin: 10px">
+                <img src="https://image.tmdb.org/t/p/w200/@tv.PosterPath" />
+                <div>@tv.Name</div>
+            </div>
+        </a>
+    }
+</div>
+
+<h3>Top Rated TVs</h3>
+
+<div class="topRatedTVContainer">
+    @foreach (var tv in Model.TopRatedTVs)
+    {
+        <a href="@Url.Action("TVDetail", "TV", new { id = tv.Id})">
+            <div style="margin: 10px">
+                <img src="https://image.tmdb.org/t/p/w200/@tv.PosterPath" />
+                <div>@tv.Name</div>
+            </div>
+        </a>
+    }
+</div>
+
+
+@if (Model.Pager.EndPage > 1)
+{
+    <ul class="pagination">
+        @if (Model.Pager.CurrentPage > 1)
+        {
+            <li>
+                <a href="~/TV/GetTVs">First</a>
+            </li>
+            <li>
+                <a href="~/TV/GetTVs?pageNumber=@(Model.Pager.CurrentPage - 1)">Previous</a>
+            </li>
+        }
+
+        @for (var page = Model.Pager.StartPage; page <= Model.Pager.EndPage; page++)
+        {
+            <li class="@(page == Model.Pager.CurrentPage ? "active" : "")">
+                <a href="~/TV/GetTVs?pageNumber=@page">@page</a>
+            </li>
+        }
+
+        @if (Model.Pager.CurrentPage < Model.Pager.TotalPages)
+        {
+            <li>
+                <a href="~/TV/GetTVs?pageNumber=@(Model.Pager.CurrentPage + 1)">Next</a>
+            </li>
+            <li>
+                <a href="~/TV/GetTVs?pageNumber=@(Model.Pager.TotalPages)">Last</a>
+            </li>
+        }
+    </ul>
+}

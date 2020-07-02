@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Add Favorite Movie";
+}
+
+<h2>Are you sure you want to add this movie to your favorite movie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Add to my favorites" class="btn btn-default" /> 
+    </div>
+}
